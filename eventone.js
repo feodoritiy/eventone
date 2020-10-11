@@ -33,7 +33,7 @@ function when(actionLabel, reactor, callPlace = 0) {
     if (!__EVENTONE__[actionLabel]) // check actionLabel exist
       __EVENTONE__[actionLabel] = []; // create if not
 
-    __EVENTONE__[actionLabel][placeDimension].push([callPlace, reactor]); // pushing reactor inside
-    __EVENTONE__[actionLabel][placeDimension].sort((a, b) => a[0] - b[0]); // sorting reactors by callPlace
+    __EVENTONE__[actionLabel].push([callPlace, reactor]); // pushing reactor inside
+    __EVENTONE__[actionLabel].sort((a, b) => a[0] - b[0]); // sorting reactors by callPlace
   }
 }
